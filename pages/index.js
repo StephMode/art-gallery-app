@@ -1,28 +1,13 @@
 import ArtPieces from "@/components/ArtPieces";
-import useSWR from "swr";
 
-export default function HomePage() {
-  const { data, error, isLoading } = useSWR(
-    "https://example-apis.vercel.app/api/art",
-    fetcher
-  );
+// 🚨 FIX: lift fetching and SWR up to app to mitigate issues of data not being available upon rendering in child comps
+// 👍🏻 That fixed it
 
-  async function fetcher(url) {
-    const response = await fetch(url);
-    return await response.json();
-  }
-
-  if (error) return <h1>🛑 failed</h1>;
-  if (isLoading) return <h1>⏳ is loading</h1>;
-
-  const fetchData = data;
-
-  console.log(fetchData);
-
+export default function HomePage({ pieces }) {
   return (
     <div>
       <h1>Art Gallery App</h1>
-      <ArtPieces></ArtPieces>
+      <ArtPieces pieces={pieces}></ArtPieces>
     </div>
   );
 }

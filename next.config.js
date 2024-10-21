@@ -13,6 +13,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    domains: ["example-apis.vercel.app"], // domains from which Image on nextJS may take src URL go here, and only hostname
+  },
 };
 
 module.exports = nextConfig;
