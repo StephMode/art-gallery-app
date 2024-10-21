@@ -5,21 +5,26 @@ import Image from "next/image";
 // 2. Include the domain of the API into nextJS config
 
 function ArtPieces({ pieces }) {
-  // console.log(pieces);
+  console.log(pieces);
 
   return (
     <>
       <h1>Art Pieces</h1>
       <ul>
-        <li>
-          <p>{pieces[1].imageSource}</p>
-          <Image
-            src={pieces[10].imageSource}
-            width={400}
-            height={800}
-            alt="some img"
-          ></Image>
-        </li>
+        {pieces.map((piece) => {
+          return (
+            <li>
+              <h2>{piece.name}</h2>
+              <Image
+                src={piece.imageSource}
+                width={piece.dimensions.width}
+                height={piece.dimensions.height}
+                alt={piece.name}
+              />
+              <h3>{piece.artist}</h3>
+            </li>
+          );
+        })}
       </ul>
     </>
   );

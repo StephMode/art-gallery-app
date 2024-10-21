@@ -5,8 +5,7 @@ export default function App({ Component, pageProps }) {
   // Lifted Up from HomePage to fix availability of fetched data globally
   const { data, error, isLoading } = useSWR(
     "https://example-apis.vercel.app/api/art",
-    fetcher,
-    { refreshInterval: 10000 }
+    fetcher
   );
 
   async function fetcher(url) {
