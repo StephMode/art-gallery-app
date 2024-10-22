@@ -15,12 +15,14 @@ function ArtPieces({ pieces }) {
           return (
             <li>
               <h2>{piece.name}</h2>
+
               <Image
                 src={piece.imageSource}
-                width={piece.dimensions.width}
-                height={piece.dimensions.height}
+                width={400}
+                height={250}
                 alt={piece.name}
               />
+
               <h3>{piece.artist}</h3>
             </li>
           );
