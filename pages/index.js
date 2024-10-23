@@ -1,4 +1,5 @@
 import ArtPieces from "@/components/ArtPieces";
+import Spotlight from "@/components/Spotlight";
 
 // 🚨 FIX: lift fetching and SWR up to app to mitigate issues of data not being available upon rendering in child comps
 // 👍🏻 That fixed it
