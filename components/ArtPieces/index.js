@@ -9,7 +9,6 @@ import Spotlight from "../Spotlight";
 function ArtPieces({ pieces }) {
   return (
     <>
-      <Spotlight artist={pieces.artist} />
       <h1>Art Pieces</h1>
       <ul>
         {pieces.map((piece) => (

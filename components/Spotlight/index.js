@@ -1,9 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
-function Spotlight({ artist }) {
+function Spotlight({ artist, image }) {
+  // Image and text for represenation go here
   return (
     <>
       <h2>{artist}</h2>
+      <Image src={image} width={650} height={300} alt={"piece in spotlight"} />
       <p>meh</p>
     </>
   );
@@ -29,8 +32,12 @@ xx> 🟡 could work technically, but from a component structure perspective, it 
 
 Third Approach
 
-- make it child of HomePage after all
-- MathRandom should be able to operate
+✅ - make it child of HomePage after all
+✅ - MathRandom should be implemented in HomePage where we have access to the data
+✅ - call props image, artist in spotlight
+ ✅- MathRandom shall then be stored in a variable so that it can be accessed as an index to the props
+- props will then pass down randomized index of artist and imageSource as props in the comp
+- Spotlight shall than serve as purely represenational component
 
 
 
