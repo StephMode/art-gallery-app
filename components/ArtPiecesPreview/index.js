@@ -5,7 +5,7 @@ function ArtPiecesPreview({ title, image, artist }) {
   return (
     <>
       <h2>{title}</h2>
-      <Image src={image} width={400} height={250} alt={title} />
+      <Image src={image} width={400} height={250} alt={image} />
       <h3>{artist}</h3>
     </>
   );
