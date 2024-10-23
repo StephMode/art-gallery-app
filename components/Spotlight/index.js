@@ -6,7 +6,7 @@ function Spotlight({ artist, image }) {
   return (
     <>
       <h2>{artist}</h2>
-      <Image src={image} width={650} height={300} alt={"piece in spotlight"} />
+      <Image src={image} width={400} height={350} alt={"piece in spotlight"} />
       <p>meh</p>
     </>
   );
@@ -35,9 +35,9 @@ Third Approach
 ✅ - make it child of HomePage after all
 ✅ - MathRandom should be implemented in HomePage where we have access to the data
 ✅ - call props image, artist in spotlight
- ✅- MathRandom shall then be stored in a variable so that it can be accessed as an index to the props
-- props will then pass down randomized index of artist and imageSource as props in the comp
-- Spotlight shall than serve as purely represenational component
+✅ - MathRandom shall then be stored in a variable so that it can be accessed as an index to the props
+✅ - props will then pass down randomized index of artist and imageSource as props in the comp
+✅ - Spotlight shall than serve as purely represenational component
 
 
 
